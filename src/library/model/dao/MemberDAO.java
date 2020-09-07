@@ -41,7 +41,8 @@ public class MemberDAO {
 					Customer l = new Customer();
 					l = new Customer();
 					l.setUser_no(rset.getInt("user_no"));
-					l.setUser_id(rset.getString("user_name"));
+					l.setUser_id(rset.getString("user_id"));
+					l.setUser_name(rset.getString("user_name"));
 					l.setUser_age(rset.getInt("user_age"));
 					l.setAddr(rset.getString("addr"));
 					l.setGender(rset.getString("gender"));
