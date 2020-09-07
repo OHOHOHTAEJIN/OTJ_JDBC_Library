@@ -65,6 +65,7 @@ public class RentDAO {
 			System.out.println("DAO : " + e.getMessage());
 
 		}finally {
+			JDBCTemplate.close(conn);
 			JDBCTemplate.close(rset);
 			JDBCTemplate.close(stmt);
 		}
@@ -107,6 +108,7 @@ public class RentDAO {
 
 		}finally {
 			JDBCTemplate.close(rset);
+			JDBCTemplate.close(conn);
 			JDBCTemplate.close(stmt);
 		}
 
@@ -151,6 +153,7 @@ public class RentDAO {
 		}finally {
 			JDBCTemplate.close(rset);
 			JDBCTemplate.close(stmt);
+			JDBCTemplate.close(conn);
 		}
 
 
@@ -178,7 +181,7 @@ public class RentDAO {
 			System.out.println("DAO : " + e.getMessage());
 
 		}finally {
-			
+			JDBCTemplate.close(conn);
 			JDBCTemplate.close(stmt);
 		}
 

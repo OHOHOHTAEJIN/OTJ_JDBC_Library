@@ -143,19 +143,19 @@ public class LibraryView {
 				mc.selectAll();
 				break;
 			case 2:
-
+				mc.selectname(this.input_name());
 				break;
 			case 3:
-
+				mc.selectid(this.input_id());
 				break;
 			case 4:
-
+				mc.insert(this.input_member());
 				break;
 			case 5:
-
+				//mc.update();
 				break;
 			case 6:
-
+				//mc.delete();
 				break;
 			case 7:
 
@@ -174,6 +174,37 @@ public class LibraryView {
 		for(int i = 0 ; i < list.size() ; i++ ) {
 			System.out.println(list.get(i).toString());
 		}
+	}
+	public String input_name() {
+		System.out.print("조회할 회원 이름 : ");
+		return sc.next();
+	}
+	public String input_id() {
+		System.out.print("조회할 회원 아이디 : ");
+		return sc.next();
+	}
+	public Customer input_member() {
+		Customer c = new Customer();
+		System.out.print("아이디 : ");
+		c.setUser_id(sc.next());
+		sc.nextLine();
+		System.out.print("이름 : ");
+		c.setUser_name(sc.next());
+		sc.nextLine();
+		System.out.print("나이 : ");
+		c.setUser_age(sc.nextInt());
+		sc.nextLine();
+		System.out.print("주소 : ");
+		c.setAddr(sc.next());
+		sc.nextLine();
+		System.out.print("성별(M/F) : ");
+		c.setGender(sc.next());
+		sc.nextLine();
+		return c;
+	}
+	public void OneMDisplay(Customer c) {
+		System.out.println(c.toString());
+		
 	}
 
 	public void RentDisplay() {
